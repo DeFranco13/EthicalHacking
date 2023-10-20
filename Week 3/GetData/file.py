@@ -6,6 +6,7 @@ import socket
 import json
 import os
 import server
+import dirbuster
 
 
 # =====
@@ -17,7 +18,7 @@ import server
 target = str(sys.argv[1])
 ports = [21, 22, 80, 139, 443, 8080]
 headerBool = True
-data = []
+fileData = []
 
 
 # =====
@@ -60,18 +61,18 @@ dataIP = "\nHet ip-adres van " + sys.argv[1] + " is: " + host_ip + "\n"
 scan_v = nmap.PortScanner()
 dataScanningUpdate = f"Scan results from: {target}"
 
-data.append(dataIP)
-data.append(dataScanningUpdate)
+fileData.append(dataIP)
+fileData.append(dataScanningUpdate)
 
 print("Ports...")
 for port in ports:
     portscan = scan_v.scan(target, str(port))
     dataPort = f"Poort: {port} is " + portscan["scan"][list(portscan["scan"])[0]]["tcp"][port]["state"]
 
-    data.append(dataPort)
+    fileData.append(dataPort)
 
 dataServer = f"Host: {target} is", portscan["scan"][list(portscan["scan"])[0]]["status"]["state"]
-data.append(dataServer)
+fileData.append(dataServer)
 
 
 
@@ -81,7 +82,7 @@ data.append(dataServer)
 
 print("Geolocating...")
 dataIn = "\nHost gegevens:\n"
-data.append(dataIn)
+fileData.append(dataIn)
 
 request_twee = requests.get("https://ipinfo.io/" + host_ip + "/json")
 response = json.loads(request_twee.text)
@@ -91,11 +92,13 @@ dataRegio = "Regie: " + response["region"]
 dataCity = "Stad: " + response["city"]
 dataCountry = "Land: " + response["country"]
 
-data.append(dataLocation)
-data.append(dataRegio)
-data.append(dataCity)
-data.append(dataCountry)
+fileData.append(dataLocation)
+fileData.append(dataRegio)
+fileData.append(dataCity)
+fileData.append(dataCountry)
 
-server.serverSock.run(data)
+dirbuster.run()
+server.serverSock.run(fileData, dirbuster.ports)
+
 
 print("Done...!")

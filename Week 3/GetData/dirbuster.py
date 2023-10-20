@@ -9,6 +9,8 @@ TARGET = str(sys.argv[1])
 THREADS = 50
 WORDLIST = "all.txt"
 
+ports = []
+
 
 def get_words(resume=None):
     def extend_words(word):
@@ -49,7 +51,9 @@ def dir_bruter(words):
             continue
 
         if r.status_code == 200:
-            print(f'\nSuccess ({r.status_code}: {url})')
+            word = f'\nSucces ({r.status_code}: {url})'
+            ports.append(word)
+            print(word)
             
         elif r.status_code == 404:
             sys.stderr.write('.')
@@ -58,7 +62,8 @@ def dir_bruter(words):
             print(f'{r.status_code} => {url}')
 
 
-if __name__ == '__main__':
+
+def run():
     words = get_words()
     print('Press return to continue.')
     sys.stdin.readline()

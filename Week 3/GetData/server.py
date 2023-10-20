@@ -3,7 +3,7 @@
 import socket
 
 class serverSock:
-    def run(data):
+    def run(data, ports):
         
         host = socket.gethostname() # Localhost / vervang met IP voor netwerk verkeer
         port = 1313
@@ -26,6 +26,9 @@ class serverSock:
         for i in data:
             boodschap = boodschap + f"\n {i}"
         
+        for i in ports:
+            boodschap = boodschap + f"\n {i}"
+
         conn.send(boodschap.encode("ascii"))
         conn.close()
 
