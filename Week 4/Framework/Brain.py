@@ -4,38 +4,35 @@ from rich import print
 from tqdm import tqdm
 from time import sleep
 import multiprocessing
+import Scans.Scan4data 
 
-dirbusterState = ""
-dataScanState = ""
+
+website = ""
+scan = 0
+json_path = "Framework/settings.json"
 
 def line():
     print("=" * os.get_terminal_size().columns)
 
 def ReadScans():
-    pass
-def StartScans():
+    global dataScanState
 
-    def Dirbuster():
-        pass
-    def DataScan():
-        pass
+    with open(json_path, "r") as json_file:
+        data = json.load(json_file)
 
-    def Bar():
-        with tqdm(total=100, desc="Scan 1") as pbar:
-            for i in range(100):
-                pbar.update(1)
-                sleep(0.2)
-
-    process1 = multiprocessing.Process(target=Dirbuster)
-    process2 = multiprocessing.Process(target=DataScan)
-    process3 = multiprocessing.Process(target=Bar)
-
-
+    dataScanState = data.get("DataScan", "")
     
-    process1.start()
-    process2.start()
+def StartScans():
+    def Bar():
+        if scan == 1:
+            with tqdm(total=100, desc="Data Scan") as pbar:
+                for i in range(100):
+                    pbar.update(1)
+                    sleep(0.2)
+        if scan == 2:
+            with tqdm(total=100, desc="Dirbuster Scan") as pbar:
+                for i in range(100):
+                    pbar.update(1)
+                    sleep(0.2)
 
-    process2.join()  # Wait for the 'test' function to complete first
-    process1.join()
-
-    print("Both functions have completed.")
+    Scans.Scan4data.Start(website)

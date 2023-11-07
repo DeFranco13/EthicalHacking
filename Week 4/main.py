@@ -6,6 +6,8 @@ print(f"\nThis framework has been build to run several scripts with time display
 print("Only use this script on websites with permission!")
 print(f"Feel free to experiment with this script!\n")
 B.line()
-website = input("\nWebsite url: ")
-print(f"Scans will start on \" {website} \"!")
+B.website = input("\nWebsite url: ")
+print(f"Scans will start on \" {B.website} \"!")
 
+B.ReadScans()
+B.StartScans()
