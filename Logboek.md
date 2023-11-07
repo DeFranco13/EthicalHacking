@@ -35,3 +35,7 @@ We hebben in het verleden al bekeken naar verschillende manieren van cryptografi
 Ik heb verder nog research gedaan over wordpress mapping en bruteforcing, deze spraken mezelf niet enorm veel aan omdat het modules zijn die ik al reeds gebruik via andere commando's zoals gobuster en hydra of zelf burpsuite. Natuurlijk is wel handig om het te automatiseren in een werkend framework. Ik ga de modules nog verder evalueren en moest deze positief zijn pas ik deze toe in het framework. 
 
 Ik heb de brute forcing toegepast in een nieuwe structuur, mijn framework ziet er momenteel uit als 1 py bestand voor het opstarten en dan 2 folders met daarin de functies die worden uitgevoerd. De eerste folder heeft als doel om alle data van een server op te halen en deze door te sturen, de 2de heeft als doel toegang te krijgen op de website. Via het start script zal deze automatisch worden uitgevoerd door de keuze van de gebruiker. 
+
+## Week 4
+
+In deze week ga ik de structuur aanpassen voor het grotere geheel te ontwikkelen voor het project. Het doel is dat de gebruiker een main script opstart en vandaaruit alle scripts zal uitvoeren. Deze script zullen een waarde terug geven als het is gelukt of niet en de proces ervan.
