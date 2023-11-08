@@ -39,3 +39,5 @@ Ik heb de brute forcing toegepast in een nieuwe structuur, mijn framework ziet e
 ## Week 4
 
 In deze week ga ik de structuur aanpassen voor het grotere geheel te ontwikkelen voor het project. Het doel is dat de gebruiker een main script opstart en vandaaruit alle scripts zal uitvoeren. Deze script zullen een waarde terug geven als het is gelukt of niet en de proces ervan.
+
+Ik heb het hele process en structuur aangepast. Er worden modules en bestanden ingeladen en adhv van de keuzes worden bepaalde script uitgevoerd verder worden de data opgeslagen in een json bestand. Ik wil deze week nog een ingebouwde vpn instellen met daarbij een list.txt file met verschillende websites in verwerkt zodat het script verschillende sites zal scannen en output geeft.
