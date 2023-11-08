@@ -44,7 +44,7 @@ def Start(website):
 
     data.append(f"Host IP:")
     host_ip = socket.gethostbyname(website)
-    data.append("Het ip-adres van " + website + " is: " + host_ip + "\n")
+    data.append("Het ip-adres van " + website + " is: " + host_ip)
     data.append("----------")
     data.append(f"Port scan:")
     scan_v = nmap.PortScanner()
