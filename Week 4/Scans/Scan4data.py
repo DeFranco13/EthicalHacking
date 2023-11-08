@@ -29,9 +29,12 @@ def Start(website):
 # =====
 
     if headerBool:
-        data.append(f"\nRequest Header: ")
+        data.append("===== SCAN OF {website} =====")
+        data.append("----------")
+        data.append(f"Request Header: ")
         request = requests.get("https://" + website)
-        data.append(f"\n {str(request.headers)}")
+        data.append(f"{str(request.headers)}")
+        data.append("----------")
         headerBool = False
 
 
@@ -39,12 +42,14 @@ def Start(website):
 # Ip, Port & DNS scan on Host
 # =====
 
-    data.append(f"\nHost IP:")
+    data.append(f"Host IP:")
     host_ip = socket.gethostbyname(website)
-    data.append("\nHet ip-adres van " + website + " is: " + host_ip + "\n")
-    data.append(f"\nPort scan:")
+    data.append("Het ip-adres van " + website + " is: " + host_ip + "\n")
+    data.append("----------")
+    data.append(f"Port scan:")
     scan_v = nmap.PortScanner()
-    data.append(f"\nScannen van {target}\n")
+    data.append(f"Scannen van {target}")
+    data.append("----------")
     
     for port in ports:
         portscan = scan_v.scan(target, str(port))
@@ -53,12 +58,15 @@ def Start(website):
     
     dataServer = f"Host: {target} is " + portscan["scan"][list(portscan["scan"])[0]]["status"]["state"]   
     data.append(dataServer)
+    data.append("----------")
 
 # =====
 # Location Scan for Host
 # =====
 
-    data.append("\nHost gegevens: \n")
+    
+    data.append("Host gegevens:")
+    data.append("----------")
 
     request_twee = requests.get("https://ipinfo.io/" + host_ip + "/json")
     response = json.loads(request_twee.text)
