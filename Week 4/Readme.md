@@ -10,6 +10,10 @@ Het commando "python3 main.py <website url>" start het hele process op. De site 
 
 ## Strcutuur
 
-Main    ->  Middleman   ->  Intro    
-            Middleman   ->  Settings
-            Middleman   ->  Brain     ->  Scans   -> Output
+Main -> Middleman
+Middleman -> Intro
+Middleman -> Settings
+Middelman -> Brain
+Brain -> Scans
+Scans -> Output
+
