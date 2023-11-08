@@ -15,15 +15,12 @@ def Intro():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def LoadSettings():
-    Brain.line()
     loader = Settings.load_settings()
     print(" ")
-    Brain.line()
+    
 def StartProject(website):
+    Brain.website = website
     Intro()
     LoadSettings()
-    Brain.website = website
-    print(f"Scans will start on \" {Brain.website} \"!")
-    Brain.line()
     Brain.StartScans()
 

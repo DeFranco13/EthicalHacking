@@ -13,12 +13,11 @@ def LoadScan():
             return dataScanState
             
 def load_settings():
-        print(" ")
-        with tqdm(total=100, desc="Loading settings") as pbar:
+        with tqdm(total=100, desc=f"Loading settings") as pbar:
             for i in range(100):
                 pbar.update(1)
                 sleep(0.12)
-                
+
         global scanState
         scanState = LoadScan()
         
