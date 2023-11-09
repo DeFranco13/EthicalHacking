@@ -18,7 +18,7 @@ def line():
     print(f"\n")   
 
 def Bar():
-     with tqdm(total=100, desc=f"Scanning {website}\t") as pbar:
+     with tqdm(total=100, desc=f"Scanning {website}") as pbar:
             for i in range(100):
                 pbar.update(1)
                 sleep(2)
