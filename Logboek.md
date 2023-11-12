@@ -38,6 +38,6 @@ Ik heb de brute forcing toegepast in een nieuwe structuur, mijn framework ziet e
 
 ## Week 4
 
-In deze week ga ik de structuur aanpassen voor het grotere geheel te ontwikkelen voor het project. Het doel is dat de gebruiker een main script opstart en vandaaruit alle scripts zal uitvoeren. Deze script zullen een waarde terug geven als het is gelukt of niet en de proces ervan.
+In deze week heb ik de hele structuur van grond af opnieuw gemaakt. In plaats van dat je een .py file aanspreekt en die volgt alles in het script uit is er nu een main.py script dat de werking in gang zet door 9 andere python bestanden. Deze bestanden bevatten zijn zo opgesteld dat ze elkaar nodig hebben en elkaar constant gebruiken en uitlezen. Verder zijn er Input / Output folders die worden egbruikt voor het behandelen van het script. In de Input folder is er settings.json aanwezig, dit is een bestand die wordt uitgelezen en adhv de keuzes zullen er bepaalde modules worden uitgevoerd. 
 
-Ik heb het hele process en structuur aangepast. Er worden modules en bestanden ingeladen en adhv van de keuzes worden bepaalde script uitgevoerd verder worden de data opgeslagen in een json bestand. Ik wil deze week nog een ingebouwde vpn instellen met daarbij een list.txt file met verschillende websites in verwerkt zodat het script verschillende sites zal scannen en output geeft.
+De reeds aanwezige modules doen het volgende: Verzamelen van data, ip , locatie, ports, backend, certificaat gegevens. Momenteel staan er nog verschillende modules op de planning maar dit zijn al de reeds geïnstalleerde modules. De framework die we in deze tijd begint stilaan zijn structuur te krijgen en is ook simpel aan te vullen en is enorm flexibel. 
