@@ -38,6 +38,10 @@ Ik heb de brute forcing toegepast in een nieuwe structuur, mijn framework ziet e
 
 ## Week 4
 
+Het onderzoeken van Django en cryptografie was interessant. De cryptografie die we hebben behandelt hebben we eerder al eens gezien in een ander vak. Door deze oefening hebben we een opdracht op een Hack The Future kunnen oplossen. Er was een Ceasar versleuteling en we konden onze kennis en code die we hadden ontwikkeld hiervoor gebruikt. Django is een framework voor het opstellen en onderhouden van een website het is enorm snel en simpel voor het beheren en aan te passen. Ik heb niet veel tijd in Django gestoken.
+
+Verder mochten we in de laatste les Scapy eens uitvoeren maar ik heb dit voorlopig uitgesteld omdat ik dit later ga behandelen in mijn framework. Ik heb mijn framework behandelt en deze opnieuw opgesteld.
+
 In deze week heb ik de hele structuur van grond af opnieuw gemaakt. In plaats van dat je een .py file aanspreekt en die volgt alles in het script uit is er nu een main.py script dat de werking in gang zet door 9 andere python bestanden. Deze bestanden bevatten zijn zo opgesteld dat ze elkaar nodig hebben en elkaar constant gebruiken en uitlezen. Verder zijn er Input / Output folders die worden egbruikt voor het behandelen van het script. In de Input folder is er settings.json aanwezig, dit is een bestand die wordt uitgelezen en adhv de keuzes zullen er bepaalde modules worden uitgevoerd. 
 
 De reeds aanwezige modules doen het volgende: Verzamelen van data, ip , locatie, ports, backend, certificaat gegevens. Momenteel staan er nog verschillende modules op de planning maar dit zijn al de reeds geïnstalleerde modules. De framework die we in deze tijd begint stilaan zijn structuur te krijgen en is ook simpel aan te vullen en is enorm flexibel. 
