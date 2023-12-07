@@ -1,8 +1,15 @@
 import shutil
 import os
 import json
-#import Pentesting.NetworkScan as NetworkScan
+import Pentesting.NetworkScan as NetworkScan
 import Pentesting.WebsiteScan as WebsiteScan
+
+global startLoop 
+global WebsiteLoop
+global NetworkLoop
+WebsiteLoop = True
+NetworkLoop = True
+startLoop = True
 
 def line():
     # Get the terminal width
@@ -58,13 +65,13 @@ def WebsiteChange():
                     json.dump(data, file, indent=2)
 
 def Website():
-    loop = True
-    while loop:
+    while WebsiteLoop:
         WebsiteSettings()
         line()
         print("\nChoose an option: \n")
         print("1) Start Scan (the above scans on True will run)")
-        print("2) Change Services\n")
+        print("2) Change Services")
+        print("3) Return\n")
         line()
         keuze = int(input("\n->: "))
         clean()
@@ -76,14 +83,16 @@ def Website():
             line()
             websiteUrl = input("\n->: ")
             WebsiteScan.Start(websiteUrl)
+            break
 
         elif keuze == 2:
             WebsiteChange()
-            
+        
+        elif keuze == 3:
+            break
+
         else:
             continue
-
-
 
 def NetworkSettings():
     networkSetting = "Pentesting/Network/Input/settings.json"
@@ -129,31 +138,34 @@ def NetworkChange():
                     json.dump(data, file, indent=2)        
 
 def Network():
-    loop = True
-    while loop:
+    while NetworkLoop:
         NetworkSettings()
         line()
         print("\nChoose an option: \n")
         print("1) Start Scan (the above scans on True will run)")
-        print("2) Change Services\n")
+        print("2) Change Services")
+        print("3) Return\n")
         line()
         keuze = int(input("\n->: "))
         clean()
         if keuze == 1:
-            loop = False
             clean()
+            NetworkScan.Start()
+            break
 
         elif keuze == 2:
             NetworkChange()
             
+        elif keuze == 3:
+            break
         else:
             continue
 
-
 def Start():
-    clean()
-    line()
-    print("""
+    while startLoop:
+        clean()
+        line()
+        print("""
 
  ____          _   ____                   _              
  |  _ \ ___  __| | / ___| _ __   __ _ _ __| |_ __ _ _ __  
@@ -164,22 +176,26 @@ def Start():
 
 Hacking Framework v1.0        
           """)
-    line()
-    print("""
+        line()
+        print("""
 Choose your service:    
                 
 1) Website
-2) Network        
+2) Network    
+3) Exit                  
         """)
-    line()
-    keuze = int(input(f"\n->: "))
-    clean()
-    if keuze == 1:
-        Website()
-    elif keuze == 2:
-        Network()
-    else:
-        print("Wrong value!")
+        line()
+        keuze = int(input(f"\n->: "))
+        clean()
+        if keuze == 1:
+            Website()
+        elif keuze == 2:
+            Network()
+        
+        elif keuze == 3:
+            exit()
+        else:
+            print("Wrong value!")
     
 
 
