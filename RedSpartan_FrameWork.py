@@ -4,12 +4,17 @@ import json
 import Pentesting.NetworkScan as NetworkScan
 import Pentesting.WebsiteScan as WebsiteScan
 
+
 global startLoop 
 global WebsiteLoop
-global NetworkLoop
 WebsiteLoop = True
-NetworkLoop = True
 startLoop = True
+
+# ==========
+#
+# Code Modules
+#
+# ==========
 
 def line():
     # Get the terminal width
@@ -21,6 +26,13 @@ def line():
 def clean():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+
+# ==========
+#
+# Website Module
+#
+# ==========
+    
 def WebsiteSettings():
     webSettings = "Pentesting/WebScan/Input/settings.json"
     with open(webSettings, "r") as file:
@@ -94,72 +106,33 @@ def Website():
         else:
             continue
 
-def NetworkSettings():
-    networkSetting = "Pentesting/Network/Input/settings.json"
-    with open(networkSetting, "r") as file:
-        data = json.load(file)
-        max_key_length = max(len(key) for key in data)
-        line()
-        print("")
-        print(f"ServiceName           Status\n")
-        for key, value in data.items():
-            print(f'{key.ljust(max_key_length)} : {value}')
-        print("")
+# ==========
+#
+# Network module
+#
+# ==========
 
-def NetworkChange():
-    loop = True
-    while loop:
-        networkSetting = "Pentesting/Network/Input/settings.json"
-        with open(networkSetting, "r") as file:
-            data = json.load(file)
-            max_key_length = max(len(key) for key in data)
-            line()
-            print("")
-            print(f"ServiceName           Status\n")
-            teller = 1
-            for key, value in data.items():   
-                print(f'{teller}) {key.ljust(max_key_length)} : {value}')
-                teller = teller + 1
-            print(f"{teller}) Stop editing")
-            print("")
-            line()
-            keuze = int(input("What number would u like to change: "))
-            clean()
-            if keuze > teller -1 | keuze < 0:
-                line()
-                print("\nWrong value!\n")
-            elif keuze == teller:
-                loop = False
-                clean()
-            else:
-                selected_key = list(data.keys())[keuze - 1]
-                data[selected_key] = not data[selected_key]
-                with open(networkSetting, "w") as file:
-                    json.dump(data, file, indent=2)        
+def Device_Scan():
+    NetworkScan.Device_Scan()
 
-def Network():
-    while NetworkLoop:
-        NetworkSettings()
-        line()
-        print("\nChoose an option: \n")
-        print("1) Start Scan (the above scans on True will run)")
-        print("2) Change Services")
-        print("3) Return\n")
-        line()
-        keuze = int(input("\n->: "))
-        clean()
-        if keuze == 1:
-            clean()
-            NetworkScan.Start()
-            break
+def Wifi_scan():
+    NetworkScan.Wifi_Scan()
 
-        elif keuze == 2:
-            NetworkChange()
-            
-        elif keuze == 3:
-            break
-        else:
-            continue
+def Handshake():
+    NetworkScan.Handshake_Scan()
+
+def Phone():
+    NetworkScan.Phone_Scan()
+
+def Deauth():
+    NetworkScan.Deauth()
+
+
+# ==========
+#
+# Start Script
+#
+# ==========
 
 def Start():
     while startLoop:
@@ -180,9 +153,13 @@ Hacking Framework v1.0
         print("""
 Choose your service:    
                 
-1) Website
-2) Network    
-3) Exit                  
+1) Website Scan
+2) Wifi Scan
+3) Phone Number Geolocation
+4) Wifi Handshake      
+5) Wifi Deauth     
+6) Device Scan                 
+7) Exit                  
         """)
         line()
         keuze = int(input(f"\n->: "))
@@ -190,11 +167,20 @@ Choose your service:
         if keuze == 1:
             Website()
         elif keuze == 2:
-            Network()
-        
+            Wifi_scan()
         elif keuze == 3:
+            Phone()
+        elif keuze == 4:
+            Handshake()
+        elif keuze == 5:
+            Deauth()
+        elif keuze == 6:
+            Device_Scan()
+        elif keuze == 7:
             exit()
         else:
             print("Wrong value!")
+            
+        
     
 Start()
