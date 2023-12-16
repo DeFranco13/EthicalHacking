@@ -112,6 +112,7 @@ def Deauth():
     NetworkScan.Deauth()
 
 
+
 # ==========
 #
 # Start Script
@@ -142,7 +143,7 @@ Choose your service:
 3) Phone Number Geolocation
 4) Wifi Handshake      
 5) Wifi Deauth     
-6) Device Scan                 
+6) Device Scan                
 7) Exit                  
         """)
         Module.line()
