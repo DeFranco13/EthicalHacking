@@ -106,6 +106,7 @@ SQLAlchemy==2.0.13
 sqlparse==0.4.4
 sslscan==0.5.1
 sslyze==5.2.0
+Sublist3r==1.0
 tldextract==5.1.0
 tls-parser==2.0.1
 tomli==2.0.1
