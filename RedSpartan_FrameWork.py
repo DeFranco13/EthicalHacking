@@ -3,29 +3,13 @@ import os
 import json
 import Pentesting.NetworkScan as NetworkScan
 import Pentesting.WebsiteScan as WebsiteScan
+import Pentesting.ModuleTools as Module
 
 
 global startLoop 
 global WebsiteLoop
 WebsiteLoop = True
 startLoop = True
-
-# ==========
-#
-# Code Modules
-#
-# ==========
-
-def line():
-    # Get the terminal width
-    terminal_width, _ = shutil.get_terminal_size()
-
-    # Print a line of "=" characters
-    print("=" * terminal_width)
-
-def clean():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
 
 # ==========
 #
@@ -38,7 +22,7 @@ def WebsiteSettings():
     with open(webSettings, "r") as file:
         data = json.load(file)
         max_key_length = max(len(key) for key in data)
-        line()
+        Module.line()
         print("")
         print(f"ServiceName           Status\n")
         for key, value in data.items():
@@ -52,7 +36,7 @@ def WebsiteChange():
         with open(webSettings, "r") as file:
             data = json.load(file)
             max_key_length = max(len(key) for key in data)
-            line()
+            Module.line()
             print("")
             print(f"ServiceName           Status\n")
             teller = 1
@@ -61,15 +45,15 @@ def WebsiteChange():
                 teller = teller + 1
             print(f"{teller}) Stop editing")
             print("")
-            line()
+            Module.line()
             keuze = int(input("What number would u like to change: "))
-            clean()
+            Module.clean()
             if keuze > teller -1 | keuze < 0:
-                line()
+                Module.line()
                 print("\nWrong value!\n")
             elif keuze == teller:
                 loop = False
-                clean()
+                Module.clean()
             else:
                 selected_key = list(data.keys())[keuze - 1]
                 data[selected_key] = not data[selected_key]
@@ -79,20 +63,20 @@ def WebsiteChange():
 def Website():
     while WebsiteLoop:
         WebsiteSettings()
-        line()
+        Module.line()
         print("\nChoose an option: \n")
         print("1) Start Scan (the above scans on True will run)")
         print("2) Change Services")
         print("3) Return\n")
-        line()
+        Module.line()
         keuze = int(input("\n->: "))
-        clean()
+        Module.clean()
         if keuze == 1:
             loop = False
-            clean()
-            line()
+            Module.clean()
+            Module.line()
             print("\nGive your target url.\nFor example google.com\n")
-            line()
+            Module.line()
             websiteUrl = input("\n->: ")
             WebsiteScan.Start(websiteUrl)
             break
@@ -136,8 +120,8 @@ def Deauth():
 
 def Start():
     while startLoop:
-        clean()
-        line()
+        Module.clean()
+        Module.line()
         print("""
 
  ____          _   ____                   _              
@@ -149,7 +133,7 @@ def Start():
 
 Hacking Framework v1.0        
           """)
-        line()
+        Module.line()
         print("""
 Choose your service:    
                 
@@ -161,9 +145,9 @@ Choose your service:
 6) Device Scan                 
 7) Exit                  
         """)
-        line()
+        Module.line()
         keuze = int(input(f"\n->: "))
-        clean()
+        Module.clean()
         if keuze == 1:
             Website()
         elif keuze == 2:
