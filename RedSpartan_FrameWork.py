@@ -10,6 +10,10 @@ global startLoop
 global WebsiteLoop
 WebsiteLoop = True
 startLoop = True
+TRED = '\033[31m'
+TGREEN =  '\033[32m'
+TWHITE = '\033[37m'
+
 
 # ==========
 #
@@ -26,7 +30,11 @@ def WebsiteSettings():
         print("")
         print(f"ServiceName           Status\n")
         for key, value in data.items():
-            print(f'{key.ljust(max_key_length)} : {value}')
+            teller = "+"
+            if value == False:
+                print(f'[ {TGREEN}{teller}{TWHITE} ] {key.ljust(max_key_length)} : {TRED}{value}{TWHITE}')
+            elif value == True:
+                print(f'[ {TGREEN}{teller}{TWHITE} ] {key.ljust(max_key_length)} : {TGREEN}{value}{TWHITE}')
         print("")
 
 def WebsiteChange():
@@ -41,9 +49,12 @@ def WebsiteChange():
             print(f"ServiceName           Status\n")
             teller = 1
             for key, value in data.items():   
-                print(f'{teller}) {key.ljust(max_key_length)} : {value}')
+                if value == False:
+                    print(f'[ {TGREEN}{teller}{TWHITE} ] {key.ljust(max_key_length)} : {TRED}{value}{TWHITE}')
+                elif value == True:
+                    print(f'[ {TGREEN}{teller}{TWHITE} ] {key.ljust(max_key_length)} : {TGREEN}{value}{TWHITE}')
                 teller = teller + 1
-            print(f"{teller}) Stop editing")
+            print(f"[ {TGREEN}{teller}{TWHITE} ] Stop editing")
             print("")
             Module.line()
             keuze = int(input("What number would u like to change: "))
@@ -65,9 +76,9 @@ def Website():
         WebsiteSettings()
         Module.line()
         print("\nChoose an option: \n")
-        print("1) Start Scan (the above scans on True will run)")
-        print("2) Change Services")
-        print("3) Return\n")
+        print(f"[ {TGREEN}1{TWHITE} ] Start Scan (the above scans on True will run)")
+        print(f"[ {TGREEN}2{TWHITE} ] Change Services")
+        print(f"[ {TGREEN}3{TWHITE} ] Return\n")
         Module.line()
         keuze = int(input("\n->: "))
         Module.clean()
@@ -112,18 +123,18 @@ def Deauth():
     NetworkScan.Deauth()
 
 
-
 # ==========
 #
 # Start Script
 #
 # ==========
 
+
 def Start():
     while startLoop:
         Module.clean()
         Module.line()
-        print("""
+        print(f"""
 
  ____          _   ____                   _              
  |  _ \ ___  __| | / ___| _ __   __ _ _ __| |_ __ _ _ __  
@@ -132,19 +143,21 @@ def Start():
  |_| \_\___|\__,_| |____/| .__/ \__,_|_|   \__\__,_|_| |_|
                          |_|                             
 
-Hacking Framework v1.0        
+Hacking Framework v1.0  
+                  
+Made by {TRED}DeFranco13{TWHITE}  
           """)
         Module.line()
-        print("""
+        print(f"""
 Choose your service:    
                 
-1) Website Scan
-2) Wifi Scan
-3) Phone Number Geolocation
-4) Wifi Handshake      
-5) Wifi Deauth     
-6) Device Scan                
-7) Exit                  
+[ {TGREEN}1{TWHITE} ] Website Scan
+[ {TGREEN}2{TWHITE} ] Wifi Scan
+[ {TGREEN}3{TWHITE} ] Phone Number Geolocation
+[ {TGREEN}4{TWHITE} ] Wifi Handshake      
+[ {TGREEN}5{TWHITE} ] Wifi Deauth     
+[ {TGREEN}6{TWHITE} ] Device Scan                
+[ {TGREEN}7{TWHITE} ] Exit                  
         """)
         Module.line()
         keuze = int(input(f"\n->: "))
