@@ -14,6 +14,8 @@ startLoop = True
 TRED = Module.TRED
 TGREEN =  Module.TGREEN
 TWHITE = Module.TWHITE
+BOLD = Module.BOLD
+END = Module.END
 
 
 #############################
@@ -136,7 +138,7 @@ def Start():
         Module.clean()
         Module.line()
         print(f"""
-
+              
  ____          _   ____                   _              
  |  _ \ ___  __| | / ___| _ __   __ _ _ __| |_ __ _ _ __  
  | |_) / _ \/ _` | \___ \| '_ \ / _` | '__| __/ _` | '_ \ 
@@ -144,13 +146,13 @@ def Start():
  |_| \_\___|\__,_| |____/| .__/ \__,_|_|   \__\__,_|_| |_|
                          |_|                             
 
-Hacking Framework v1.0  
+Hacking Framework {TRED}v1.0{TWHITE}  
                   
-Made by {TRED}DeFranco13{TWHITE}  
+Made by {TRED}DeFranco13{TWHITE} 
           """)
         Module.line()
         print(f"""
-Choose your service:    
+{BOLD}Choose your service:{END}    
                 
 [ {TGREEN}1{TWHITE} ] Website Scan
 [ {TGREEN}2{TWHITE} ] Wifi Scan
