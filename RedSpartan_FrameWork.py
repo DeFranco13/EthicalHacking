@@ -10,16 +10,17 @@ global startLoop
 global WebsiteLoop
 WebsiteLoop = True
 startLoop = True
-TRED = '\033[31m'
-TGREEN =  '\033[32m'
-TWHITE = '\033[37m'
+
+TRED = Module.TRED
+TGREEN =  Module.TGREEN
+TWHITE = Module.TWHITE
 
 
-# ==========
-#
-# Website Module
-#
-# ==========
+#############################
+#                           #
+#      Website Module       #
+#                           #
+#############################
     
 def WebsiteSettings():
     webSettings = "Pentesting/WebScan/Input/settings.json"
@@ -101,11 +102,11 @@ def Website():
         else:
             continue
 
-# ==========
-#
-# Network module
-#
-# ==========
+#############################
+#                           #
+#      Network Module       #
+#                           #
+#############################
 
 def Device_Scan():
     NetworkScan.Device_Scan()
@@ -123,11 +124,11 @@ def Deauth():
     NetworkScan.Deauth()
 
 
-# ==========
-#
-# Start Script
-#
-# ==========
+#############################
+#                           #
+#     Starting Script       #
+#                           #
+#############################
 
 
 def Start():
