@@ -4,7 +4,9 @@ import json
 import Pentesting.NetworkScan as NetworkScan
 import Pentesting.WebsiteScan as WebsiteScan
 import Pentesting.ModuleTools as Module
-
+import Pentesting.BruteForceAttacks as Attacks
+import Pentesting.Download_File as download
+import Pentesting.Settings_file as settings
 
 global startLoop 
 global WebsiteLoop
@@ -125,6 +127,15 @@ def Phone():
 def Deauth():
     NetworkScan.Deauth()
 
+def Login():
+    Attacks.BruteForce_login()
+
+def Ftp():
+    Attacks.BruteForce_ftp()
+
+def Ssh():
+    Attacks.BruteForce_ssh()
+
 
 #############################
 #                           #
@@ -149,7 +160,9 @@ Hacking Framework {TRED}v1.0{TWHITE}
                   
 Made by {TRED}DeFranco13{TWHITE} 
           """)
+        
         Module.line()
+        
         print(f"""
 {BOLD}Choose your service:{END}    
                 
@@ -166,6 +179,7 @@ Made by {TRED}DeFranco13{TWHITE}
 [ {TGREEN}11{TWHITE} ]  Download Ouput 
 [ {TGREEN}12{TWHITE} ]  Exit                  
         """)
+
         Module.line()
         keuze = int(input(f"\n->: "))
         Module.clean()
@@ -183,23 +197,19 @@ Made by {TRED}DeFranco13{TWHITE}
             case 6:
                 Device_Scan()
             case 7:
-                pass
+                Ftp()
                 #
             case 8:
-                pass
+                Login()
                 #
             case 9:
-                pass
+                Ssh()
                 #
             case 10:
-                pass
+                settings.Settings()
             case 11:
-                pass
+                download.Download_file()
             case 12:
                 exit()
-            
-
-
-        
-              
+                         
 Start()
