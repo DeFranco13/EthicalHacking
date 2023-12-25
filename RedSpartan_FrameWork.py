@@ -132,7 +132,6 @@ def Deauth():
 #                           #
 #############################
 
-
 def Start():
     while startLoop:
         Module.clean()
@@ -154,32 +153,53 @@ Made by {TRED}DeFranco13{TWHITE}
         print(f"""
 {BOLD}Choose your service:{END}    
                 
-[ {TGREEN}1{TWHITE} ] Website Scan
-[ {TGREEN}2{TWHITE} ] Wifi Scan
-[ {TGREEN}3{TWHITE} ] Phone Number Geolocation
-[ {TGREEN}4{TWHITE} ] Wifi Handshake      
-[ {TGREEN}5{TWHITE} ] Wifi Deauth     
-[ {TGREEN}6{TWHITE} ] Device Scan                
-[ {TGREEN}7{TWHITE} ] Exit                  
+[ {TGREEN} 1{TWHITE} ]  Website Scan
+[ {TGREEN} 2{TWHITE} ]  Wifi Scan
+[ {TGREEN} 3{TWHITE} ]  Phone Number Geolocation
+[ {TGREEN} 4{TWHITE} ]  Wifi Handshake      
+[ {TGREEN} 5{TWHITE} ]  Wifi Deauth     
+[ {TGREEN} 6{TWHITE} ]  Device Scan  
+[ {TGREEN} 7{TWHITE} ]  FTP Bruteforce
+[ {TGREEN} 8{TWHITE} ]  Login Bruteforce
+[ {TGREEN} 9{TWHITE} ]  SSH Bruteforce  
+[ {TGREEN}10{TWHITE} ]  Settings 
+[ {TGREEN}11{TWHITE} ]  Download Ouput 
+[ {TGREEN}12{TWHITE} ]  Exit                  
         """)
         Module.line()
         keuze = int(input(f"\n->: "))
         Module.clean()
-        if keuze == 1:
-            Website()
-        elif keuze == 2:
-            Wifi_scan()
-        elif keuze == 3:
-            Phone()
-        elif keuze == 4:
-            Handshake()
-        elif keuze == 5:
-            Deauth()
-        elif keuze == 6:
-            Device_Scan()
-        elif keuze == 7:
-            exit()
-        else:
-            print("Wrong value!")
+        match(keuze):
+            case 1:
+                Website()
+            case 2:
+                Wifi_scan()
+            case 3:
+                Phone()
+            case 4:
+                Handshake()
+            case 5:
+                Deauth()
+            case 6:
+                Device_Scan()
+            case 7:
+                pass
+                #
+            case 8:
+                pass
+                #
+            case 9:
+                pass
+                #
+            case 10:
+                pass
+            case 11:
+                pass
+            case 12:
+                exit()
+            
+
+
+        
               
 Start()
