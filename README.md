@@ -56,6 +56,15 @@ Hier kan de gebruiker zijn scan opties aanpassen, of het script runnen met de ge
 
 Vanaf dat de gebruiker zijn scan opties gekozen heeft en hij kiest om de scans uit te voeren zullen al de scans via threading uitgevoert worden. Er is een progress bar ingesteld met de resterende tijd van de thread. Vanaf dat alle scans zijn uitgevoerd zal de gebruiker terug naar het beginscherm gestuurd worden.
 
+Scan proces:
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/d99ef245-5840-468a-8711-691ee2bc7a02)
+
+Al de output wordt bijgehoude:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/616f6a63-88c8-445c-9168-c1725df026b9)
+
+
+
 
 ## Header Request
 
