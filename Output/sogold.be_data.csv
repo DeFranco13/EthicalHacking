@@ -1,3 +1,0 @@
-Host,Cipher,CipherStrength,KeyAlgorithm,KeyBits,SelfSigned,Serial,NotValidBefore,NotValidAfter,SubjectDN,IssuerDN
-sogold.be,/CN=*.sogold.be,2048,RSA,2048,Not available,04:e0:6f:df:36:0c:10:4f:9b:31:ff:b9:3b:7c:c5:93:61:6c,Dec 21 17:16:33 2023 GMT,Mar 20 17:16:32 2024 GMT,/CN=*.sogold.be,/C=US/O=Let's Encrypt/CN=R3
-sogold.be,*.sogold.be,2048,RSA,2048,false,Not available,Dec 21 17:16:33 2023 GMT,Mar 20 17:16:32 2024 GMT,*.sogold.be,R3

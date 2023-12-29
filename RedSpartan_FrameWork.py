@@ -6,7 +6,7 @@ import Pentesting.WebsiteScan as WebsiteScan
 import Pentesting.ModuleTools as Module
 import Pentesting.BruteForceAttacks as Attacks
 import Pentesting.Download_File as download
-import Pentesting.Settings_file as settings
+
 
 global startLoop 
 global WebsiteLoop
@@ -162,7 +162,7 @@ Made by {TRED}DeFranco13{TWHITE}
           """)
         
         Module.line()
-        
+
         print(f"""
 {BOLD}Choose your service:{END}    
                 
@@ -175,9 +175,8 @@ Made by {TRED}DeFranco13{TWHITE}
 [ {TGREEN} 7{TWHITE} ]  FTP Bruteforce
 [ {TGREEN} 8{TWHITE} ]  Login Bruteforce
 [ {TGREEN} 9{TWHITE} ]  SSH Bruteforce  
-[ {TGREEN}10{TWHITE} ]  Settings 
-[ {TGREEN}11{TWHITE} ]  Download Ouput 
-[ {TGREEN}12{TWHITE} ]  Exit                  
+[ {TGREEN}10{TWHITE} ]  Download Ouput 
+[ {TGREEN}11{TWHITE} ]  Exit                  
         """)
 
         Module.line()
@@ -191,8 +190,12 @@ Made by {TRED}DeFranco13{TWHITE}
             case 3:
                 Phone()
             case 4:
+                if not os.path.exists("Output/Wifi.txt"):
+                    Wifi_scan()
                 Handshake()
             case 5:
+                if not os.path.exists("Output/Wifi.txt"):
+                    Wifi_scan()
                 Deauth()
             case 6:
                 Device_Scan()
@@ -206,10 +209,8 @@ Made by {TRED}DeFranco13{TWHITE}
                 Ssh()
                 #
             case 10:
-                settings.Settings()
-            case 11:
                 download.Download_file()
-            case 12:
+            case 11:
                 exit()
                          
 Start()
