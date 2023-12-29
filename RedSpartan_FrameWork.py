@@ -172,11 +172,10 @@ Made by {TRED}DeFranco13{TWHITE}
 [ {TGREEN} 4{TWHITE} ]  Wifi Handshake      
 [ {TGREEN} 5{TWHITE} ]  Wifi Deauth     
 [ {TGREEN} 6{TWHITE} ]  Device Scan  
-[ {TGREEN} 7{TWHITE} ]  FTP Bruteforce
-[ {TGREEN} 8{TWHITE} ]  Login Bruteforce
-[ {TGREEN} 9{TWHITE} ]  SSH Bruteforce  
-[ {TGREEN}10{TWHITE} ]  Download Ouput 
-[ {TGREEN}11{TWHITE} ]  Exit                  
+[ {TGREEN} 7{TWHITE} ]  Login Bruteforce
+[ {TGREEN} 8{TWHITE} ]  SSH Bruteforce  
+[ {TGREEN} 9{TWHITE} ]  Download Ouput 
+[ {TGREEN}10{TWHITE} ]  Exit                  
         """)
 
         Module.line()
@@ -200,17 +199,12 @@ Made by {TRED}DeFranco13{TWHITE}
             case 6:
                 Device_Scan()
             case 7:
-                Ftp()
-                #
+                Login()    
             case 8:
-                Login()
-                #
-            case 9:
                 Ssh()
-                #
-            case 10:
+            case 9:
                 download.Download_file()
-            case 11:
+            case 10:
                 exit()
                          
 Start()
