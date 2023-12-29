@@ -57,6 +57,7 @@ Hier kan de gebruiker zijn scan opties aanpassen, of het script runnen met de ge
 Vanaf dat de gebruiker zijn scan opties gekozen heeft en hij kiest om de scans uit te voeren zullen al de scans via threading uitgevoert worden. Er is een progress bar ingesteld met de resterende tijd van de thread. Vanaf dat alle scans zijn uitgevoerd zal de gebruiker terug naar het beginscherm gestuurd worden.
 
 Scan proces:
+
 ![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/d99ef245-5840-468a-8711-691ee2bc7a02)
 
 Al de output wordt bijgehoude:
@@ -68,11 +69,29 @@ Al de output wordt bijgehoude:
 
 ## Header Request
 
+Tijdens de data scan van de host wordt er een request uitgevoerd naar de host toe. De response hiervan houden we bij en slaan we op in een bestand. Dit is een voorbeeld van een header request:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/bffdb059-c5b9-4bc9-a623-d7dc82ebe984)
+
+
 ## IP Host
+
+Tijdens de data scan zal de url die werd meegegeven gekoppeld worden aan een vast IP adres. Dit IP adres is noodzakelijk voor andere scans later in de module.
 
 ## Poorten
 
+Voor het onderzoeken van openstaande poorten van de host hebben we zijn vast IP adres nodig. Door gebruik van Nmap kunnen we een poort scan uitvoeren op het IP adres en onderzoeken welke poorten er open staan. Deze poorten zijn enorm nuttig voor aanvallen voor te bereiden of om ze te voorkomen.
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/da41a1c9-3243-4231-866b-0b6a5b6bcc48)
+
+
 ## DNS
+
+Het onderzoeken van enkele DNS subdomeinen hebben we enkel de url nodig. Deze werd opgegeven door het initialiseren van de module. Door het gebruik van sublist3r en subprocessen scannen we de subdomeinen van de host.
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/7bb84e9e-fa85-484b-8696-4e3254d33e65)
+
+
 
 ## Geolocatie
 
