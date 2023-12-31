@@ -102,9 +102,36 @@ De locatie van de servers worden onderzocht samen met het onderzoeken van het IP
 
 ## PEM
 
+In het script wordt er automatische scan uitgevoerd naar de url voor het ontvangen van de public key die wordt gebruikt voor het tekenen van het https certificaat. Deze sleutel heeft het script ontvangen, opgeslagen en is toegankelijk in de Output folder.
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/4a383378-74f8-473d-a106-89b65337edff)
 
 
 ## Certificaten
+
+Het script maakt gebruikt van het commando openSSL, dit commando gaat het certificaat van de webserver opvragen, deze gegevens worden in een XML formaat terug gegeven. Dit formaat is natuurlijk niet makkelijk om te lezen. Daarom heb ik een extra module geschreven om de gekozen data hieruit te filteren en op te slaan in een CSV bestand. Dit is makkelijk leesbaar voor de gebruiker. 
+
+Het XML bestand:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/ec07fcdf-0df2-420b-bd57-70f72e32437d)
+
+Na de filter:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/8b8a49c2-feed-41c7-bef0-ee99c6f59618)
+
+Filter opvroep script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/fad67eb5-b976-4310-923d-7a6f89afd330)
+
+Filter script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/40a74400-55b3-4cdc-b6d4-55a6b4b890ca)
+
+In de CSV zijn er 2 lijnen beschikbaar met data, sommige vakken zijn undefined. Dit komt omdat niet al de data in hetzelfde type stond en ik heb een filtering op short en full type uitgevoert voor al de data te verzamelen. 
+
+
+
+
 
 ## Directory
 
