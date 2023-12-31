@@ -70,6 +70,9 @@ Al de output wordt bijgehoude:
 
 Tijdens de data scan van de host wordt er een request uitgevoerd naar de host toe. De response hiervan houden we bij en slaan we op in een bestand. Dit is een voorbeeld van een header request:
 
+Script:
+
+
 Output:
 
 ![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/bffdb059-c5b9-4bc9-a623-d7dc82ebe984)
@@ -83,6 +86,9 @@ Tijdens de data scan zal de url die werd meegegeven gekoppeld worden aan een vas
 
 Voor het onderzoeken van openstaande poorten van de host hebben we zijn vast IP adres nodig. Door gebruik van Nmap kunnen we een poort scan uitvoeren op het IP adres en onderzoeken welke poorten er open staan. Deze poorten zijn enorm nuttig voor aanvallen voor te bereiden of om ze te voorkomen.
 
+Script:
+
+
 Output:
 
 ![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/da41a1c9-3243-4231-866b-0b6a5b6bcc48)
@@ -91,6 +97,9 @@ Output:
 ## DNS
 
 Het onderzoeken van enkele DNS subdomeinen hebben we enkel de url nodig. Deze werd opgegeven door het initialiseren van de module. Door het gebruik van sublist3r en subprocessen scannen we de subdomeinen van de host.
+
+Script:
+
 
 Output:
 
@@ -102,6 +111,9 @@ Output:
 
 De locatie van de servers worden onderzocht samen met het onderzoeken van het IP adres. Dit geeft de locatie weer vanwaar de server wordt gehost. De output geeft coördinaten terug samen met het land en de stad.
 
+Script:
+
+
 Output:
 
 ![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/6628533e-f940-46bf-b903-ee60e8a856f5)
@@ -111,27 +123,17 @@ Output:
 
 In het script wordt er automatische scan uitgevoerd naar de url voor het ontvangen van de public key die wordt gebruikt voor het tekenen van het https certificaat. Deze sleutel heeft het script ontvangen, opgeslagen en is toegankelijk in de Output folder. De sleutel ontvangen we door het commando openSSL, dit geeft een XML bestand terug waarop wij een filter gebruiken voor enkel de PEM te ontvangen.
 
+Script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/110f624a-f578-47de-884e-d88b1772b50e)
+
 Output:
 
 ![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/4a383378-74f8-473d-a106-89b65337edff)
 
-Het script:
-
-![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/110f624a-f578-47de-884e-d88b1772b50e)
-
-
-
 ## Certificaten
 
 Het script maakt gebruikt van het commando openSSL, dit commando gaat het certificaat van de webserver opvragen, deze gegevens worden in een XML formaat terug gegeven. Dit formaat is natuurlijk niet makkelijk om te lezen. Daarom heb ik een extra module geschreven om de gekozen data hieruit te filteren en op te slaan in een CSV bestand. Dit is makkelijk leesbaar voor de gebruiker. 
-
-Het XML bestand:
-
-![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/ec07fcdf-0df2-420b-bd57-70f72e32437d)
-
-Na de filter:
-
-![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/8b8a49c2-feed-41c7-bef0-ee99c6f59618)
 
 SSL script:
 
@@ -141,6 +143,15 @@ Filter script:
 
 ![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/40a74400-55b3-4cdc-b6d4-55a6b4b890ca)
 
+XML output:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/ec07fcdf-0df2-420b-bd57-70f72e32437d)
+
+CSV output:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/8b8a49c2-feed-41c7-bef0-ee99c6f59618)
+
+
 In de CSV zijn er 2 lijnen beschikbaar met data, sommige vakken zijn undefined. Dit komt omdat niet al de data in hetzelfde type stond en ik heb een filtering op short en full type uitgevoert voor al de data te verzamelen. 
 
 
@@ -149,7 +160,7 @@ In de CSV zijn er 2 lijnen beschikbaar met data, sommige vakken zijn undefined. 
 
 Er is een module ingebouwd voor het automatisch onderzoeken voor directories van de webserver. Dit doen we door gebruik van Gobuster. Het runnen van dit commando duurt enorm lang omdat hij een medium directory lijst onderzoekt. Deze lijst is aanwezig onder WebScan en dna Tools. Het script geeft als output een bestand terug met al de gevonden paths erin vermeld!
 
-Het script:
+Script:
 
 ![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/7caf1c5f-d0f5-4504-9808-8547811501e0)
 
