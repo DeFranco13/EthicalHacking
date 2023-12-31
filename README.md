@@ -72,6 +72,8 @@ Tijdens de data scan van de host wordt er een request uitgevoerd naar de host to
 
 Script:
 
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/bf1298ff-e921-4e0b-81c1-496565a4c59d)
+
 
 Output:
 
@@ -88,6 +90,8 @@ Voor het onderzoeken van openstaande poorten van de host hebben we zijn vast IP 
 
 Script:
 
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/1466a049-8ae8-4da4-8770-df5d6d76ff5b)
+
 
 Output:
 
@@ -99,6 +103,8 @@ Output:
 Het onderzoeken van enkele DNS subdomeinen hebben we enkel de url nodig. Deze werd opgegeven door het initialiseren van de module. Door het gebruik van sublist3r en subprocessen scannen we de subdomeinen van de host.
 
 Script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/8b7a04b9-4d4b-4484-9c16-063b58515e5a)
 
 
 Output:
@@ -112,6 +118,8 @@ Output:
 De locatie van de servers worden onderzocht samen met het onderzoeken van het IP adres. Dit geeft de locatie weer vanwaar de server wordt gehost. De output geeft coördinaten terug samen met het land en de stad.
 
 Script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/b609fc74-840e-4a82-a513-80a888de54a2)
 
 
 Output:
@@ -167,15 +175,29 @@ Script:
 
 ## Robot.txt
 
+Niet elke site heeft hun Robot.txt file verborgen. Toch kan deze site soms veel informatie terug geven. Daarom zal het framework ook deze file proberen terug te ontvangen. Mocht dit slagen dan genereert hij een bestand met de output van de robot file. Hiervoor maken we een simpele request naar de url met daarachter /robot.txt aan toegevoegd.
+
 Script:
 
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/f98ec328-c899-4bb2-b36d-2b0487ecef34)
+
+
 Output:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/2893ffea-0409-475c-8841-065264fbba32)
+
 
 ## Services
 
 Script:
 
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/a3ee0240-5c09-4822-85ce-bc66a65bf559)
+
+
 Output:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/a9141964-7021-4cef-9cef-6a6a21f4eeab)
+
 
 ## Access points
 
