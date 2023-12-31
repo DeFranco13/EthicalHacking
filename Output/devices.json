@@ -1,0 +1,331 @@
+{
+        "nmap": {
+                "command_line": "nmap -oX - -sn 192.168.2.0/24",
+                "scaninfo": {},
+                "scanstats": {
+                        "timestr": "Sun Dec 31 20:48:10 2023",
+                        "elapsed": "15.65",
+                        "uphosts": "17",
+                        "downhosts": "239",
+                        "totalhosts": "256"
+                }
+        },
+        "scan": {
+                "192.168.2.1": {
+                        "hostnames": [
+                                {
+                                        "name": "mymodem",
+                                        "type": "PTR"
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.1",
+                                "mac": "Encrypted for github"
+                        },
+                        "vendor": {
+                                "98:42:65:F2:FD:E3": "Sagemcom Broadband SAS"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.2": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.2",
+                                "mac": "00:17:55:79:10:C2"
+                        },
+                        "vendor": {
+                                "00:17:55:79:10:C2": "GE Security"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.4": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.4",
+                                "mac": "00:1D:C0:73:AB:22"
+                        },
+                        "vendor": {
+                                "00:1D:C0:73:AB:22": "Enphase Energy"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.8": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.8",
+                                "mac": "26:A3:07:66:12:18"
+                        },
+                        "vendor": {},
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.9": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.9",
+                                "mac": "1C:CA:E3:74:D2:95"
+                        },
+                        "vendor": {
+                                "1C:CA:E3:74:D2:95": "Bird Home Automation GmbH"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.12": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.12",
+                                "mac": "F4:92:BF:6C:DE:D0"
+                        },
+                        "vendor": {
+                                "F4:92:BF:6C:DE:D0": "Ubiquiti Networks"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.13": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.13",
+                                "mac": "68:D7:9A:89:86:49"
+                        },
+                        "vendor": {
+                                "68:D7:9A:89:86:49": "Ubiquiti Networks"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.14": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.14",
+                                "mac": "9C:8C:6E:52:94:4C"
+                        },
+                        "vendor": {
+                                "9C:8C:6E:52:94:4C": "Samsung Electronics"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.15": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.15",
+                                "mac": "C2:68:BD:1E:A4:B2"
+                        },
+                        "vendor": {},
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.17": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.17",
+                                "mac": "F4:92:BF:6C:E3:A2"
+                        },
+                        "vendor": {
+                                "F4:92:BF:6C:E3:A2": "Ubiquiti Networks"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.18": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.18",
+                                "mac": "F4:92:BF:6C:E9:75"
+                        },
+                        "vendor": {
+                                "F4:92:BF:6C:E9:75": "Ubiquiti Networks"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.19": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.19",
+                                "mac": "68:D7:9A:76:53:8C"
+                        },
+                        "vendor": {
+                                "68:D7:9A:76:53:8C": "Ubiquiti Networks"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.36": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.36",
+                                "mac": "20:1F:3B:0E:EF:3E"
+                        },
+                        "vendor": {
+                                "20:1F:3B:0E:EF:3E": "Google"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.64": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.64",
+                                "mac": "FC:91:14:CF:5F:2F"
+                        },
+                        "vendor": {
+                                "FC:91:14:CF:5F:2F": "Technicolor CH USA"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.80": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.80",
+                                "mac": "9C:F6:1A:90:D4:E6"
+                        },
+                        "vendor": {
+                                "9C:F6:1A:90:D4:E6": "Carrier Fire & Security"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.200": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.200",
+                                "mac": "E4:1E:0A:C0:05:6C"
+                        },
+                        "vendor": {
+                                "E4:1E:0A:C0:05:6C": "Teletask Belgium"
+                        },
+                        "status": {
+                                "state": "up",
+                                "reason": "arp-response"
+                        }
+                },
+                "192.168.2.3": {
+                        "hostnames": [
+                                {
+                                        "name": "",
+                                        "type": ""
+                                }
+                        ],
+                        "addresses": {
+                                "ipv4": "192.168.2.3"
+                        },
+                        "vendor": {},
+                        "status": {
+                                "state": "up",
+                                "reason": "localhost-response"
+                        }
+                }
+        }
+}
