@@ -203,15 +203,32 @@ Output:
 
 ## Access points
 
+Bij het kiezen van de Wifi Scan optie zal het script al de beschikbare access points in de buurt opvragen en opslaan in een bestand. Er zijn 2 versies gemaakt voor het script: 1 voor Linux en 1 voor Darwin. Voor Linux werken we met nmcli die eenvoudig alles kan opvragen en voor Darwin werken we met airport. Beide scripts hebben sudo rechten nodig voor het ontvangen van de data. 
+
 Script:
 
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/408d062a-3a7f-43b7-b9d7-3385016af938)
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/cf8e19d8-a855-45b1-95c8-8512f6e6ecb8)
+
 Output:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/10e604ea-2b3a-46da-b45f-06068638f22b)
+
 
 ## GSM nummer
 
+Met deze module kan je simpel een telefoon nummer invoeren en het script zal een locatie koppelen aan de nummer. Voor het script ethisch te houden is niet nauwkeuring maar een landelijke weergave. Hiervoor gebruiken we een API die de nummer zal onderzoeken en een output terug geeft.
+
 Script:
 
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/717cdbd5-bc03-478a-a782-f61a33f10881)
+
+
 Output:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/c9117549-326c-4f30-b3c2-5abf07b6a5ac)
+
 
 ## Handshake Access Points
 
@@ -227,9 +244,17 @@ Niet uitgetest op een website voor ethische redenen.
 
 ## Apparaten binnen netwerk
 
+Voor het verzamelen van apparaten binnen een netwerk gebruiken we weer Nmap, nu gebruiken we de optie -sn voor de scan uit te voeren. Het geeft een json bestand weer dat wordt opgeslagen!
+
 Script:
 
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/da5fce0f-a17c-4577-9fda-ae5b3cb80baa)
+
+
 Output:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/bc909562-cb0a-4c44-a8a2-fe763e0f3f18)
+
 
 ## Bruteforce SSH login
 
