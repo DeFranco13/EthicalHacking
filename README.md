@@ -189,6 +189,8 @@ Output:
 
 ## Services
 
+Het leek me enrom interessant om te onderzoeken welke services en componenten er in de backend van een webserver draaien. Via Wappalyzer kunnen we dit simpel onderzoeken. Wappalyzer is niet enkel een enorm handige extension voor je browser maar het kan ook via python gebruikt worden. Het geeft een json bestand terug met daarin de informatie van de achterliggende services en hun huidige versie. 
+
 Script:
 
 ![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/a3ee0240-5c09-4822-85ce-bc66a65bf559)
