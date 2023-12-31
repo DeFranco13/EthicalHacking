@@ -167,20 +167,56 @@ Script:
 
 ## Robot.txt
 
+Script:
+
+Output:
+
 ## Services
+
+Script:
+
+Output:
 
 ## Access points
 
+Script:
+
+Output:
+
 ## GSM nummer
+
+Script:
+
+Output:
 
 ## Handshake Access Points
 
+Script:
+
+Niet uitgetest op een website voor ethische redenen.
+
 ## Deauthing Access Points
+
+Script:
+
+Niet uitgetest op een website voor ethische redenen.
 
 ## Apparaten binnen netwerk
 
+Script:
+
+Output:
+
 ## Bruteforce SSH login
 
+Script:
+
+Niet uitgetest op een website voor ethische redenen.
+
 ## Bruteforce post request login
+
+Script:
+
+Niet uitgetest op een website voor ethische redenen.
 
   
