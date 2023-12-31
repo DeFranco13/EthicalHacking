@@ -95,7 +95,14 @@ Het onderzoeken van enkele DNS subdomeinen hebben we enkel de url nodig. Deze we
 
 ## Geolocatie
 
+De locatie van de servers worden onderzocht samen met het onderzoeken van het IP adres. Dit geeft de locatie weer vanwaar de server wordt gehost. De output geeft coördinaten terug samen met het land en de stad.
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/6628533e-f940-46bf-b903-ee60e8a856f5)
+
+
 ## PEM
+
+
 
 ## Certificaten
 
