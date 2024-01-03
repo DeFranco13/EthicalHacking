@@ -1,5 +1,6 @@
+
 # Ethical Hacking Project
-==================================================================================
+
 ## Inhoud:
 
 ### Gebruik van applicatie
@@ -33,7 +34,7 @@ Binnenin de tijdspannen van het project hebben we verschillende nuttige in inter
 - Bruteforce SSH login
 - Bruteforce Login post request
 
-=======================================================================================================
+
 ## Applicatie
 
 Een leerkracht op middelbaar vertelde me altijd "Elk kind heeft een naam nodig". Daarom vond ik het nodig om een toepasselijke naam te verzinnen voor het framework. Ik kwam al snel op de griekse strijder sparten, ze zijn bekend voor hun strijdkracht en ik wil dit ook vertonen binnen het project, een simpel geschreven project dat terwijl enorm krachting kan zijn.
@@ -258,13 +259,23 @@ Output:
 
 ## Bruteforce SSH login
 
+Binnenin het framework is er een module voor het automatisch aanvallen van port 22 van een netwerk. Er zijn 2 bestanden aanwezig namelijk een lijst met users en wachtwoorden. Deze worden eerst uitgelezen door het script om vervolgens over poort 22 een client connect uit te voeren voor het verbinden. Voor deze verbinding moet je namelijk inloggen en het script gaat automatisch proberen in te loggen door de gegegeven users en wachtwoorden. Mocht het succes zijn dan wordt de user en wachtwoord in een bestand terug gegeven.
+
 Script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/61f742eb-f0ea-48e7-860d-d1ee32355195)
+
 
 Niet uitgetest op een website voor ethische redenen.
 
 ## Bruteforce post request login
 
+Er is ook een module verwerkt voor het bruteforcen van een login pagina. Dezelfde user en wachtwoord bestanden worden gebruikt zoals bij de SSH aanval en deze werkwijze ook. Het enige verschil is dat er nu een request post plaatsvindt met daarin de login gegevens.
+
 Script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/35d0c6da-ee44-4584-93f8-33db10d82a2c)
+
 
 Niet uitgetest op een website voor ethische redenen.
 
