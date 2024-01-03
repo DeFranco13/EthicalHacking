@@ -1,4 +1,0 @@
-                            SSID BSSID             RSSI CHANNEL HT CC SECURITY (auth/unicast/group)
-           Proximus Public Wi-Fi Encrypted for Github -73  11      Y  -- RSN(802.1x/AES/AES) 
-                         Fransen Encrypted for Github -51  1       Y  -- RSN(PSK/AES/AES) 
-                         Fransen Encrypted for Github -53  36,+1   Y  -- RSN(PSK/AES/AES) 
