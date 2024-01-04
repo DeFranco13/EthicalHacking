@@ -233,13 +233,26 @@ Output:
 
 ## Handshake Access Points
 
+Voor een handshake capture uit te voeren gebruiken we de scapy library, hierin zitten er verschillende methodes voor het uitvoeren van zo'n methodes zoals Dot11, Radiotap, packets verzenden en meer. Door deze toe te passen kunnen we een netwerk Deauthen en dan de handshake ervan opvangen. Deze module verzamelt enkel de handshake maar doet er niets verder mee. Het decrypten moet de gebruiker nog doen. Deze module is enkel beschikbaar op Linux machines!
+
 Script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/272d4e68-8b41-419a-a7d4-50ae7c2d9be5)
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/7a3aad39-3cb9-4e0c-8da9-38f9f9617376)
+
+
 
 Niet uitgetest op een website voor ethische redenen.
 
 ## Deauthing Access Points
 
+Voor een Deauth uit te voeren maken we gebruik van de scapy library. We geven hier de gegevens mee van de gekozen acces point en het Deauth process zal beginnen.
+
 Script:
+
+![image](https://github.com/DeFranco13/EthicalHacking/assets/75678058/4e61d2bd-5052-4348-84cd-f36e2456b207)
+
 
 Niet uitgetest op een website voor ethische redenen.
 
