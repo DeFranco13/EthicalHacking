@@ -1,4 +1,3 @@
-import shutil
 import os
 import json
 import Pentesting.NetworkScan as NetworkScan
@@ -6,6 +5,7 @@ import Pentesting.WebsiteScan as WebsiteScan
 import Pentesting.ModuleTools as Module
 import Pentesting.BruteForceAttacks as Attacks
 import Pentesting.Download_File as download
+import Pentesting.importCheck as CheckImport
 
 
 global startLoop 
